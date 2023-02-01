@@ -80,9 +80,13 @@ To see how you can add code snippets, see below:
 }
 ```
 
+- [project overview](https://youtu.be/j59qQ7YWLxw) - This video inspired me to start this project. Also I used Their functions
+
 - use px for grid gap to not have grid overflow(if use % you will incounter problems)
 
 - [active vs focus pseudo classes](https://www.youtube.com/watch?v=H1-rmg1Fj3E) - active is when you click & hold on an elemet, focus is when you clicked on an element (use with tab)
+
+- [JavaScript ES6 Modules](https://www.youtube.com/watch?v=cRHQNNcYf6s) - learned how to export/import using JS Modules
 ### Continued development
 
 I would like to become more proficient in my HTML and CSS skills before I start doing more advanced web development. As I am practicing these skills, applying the prior knowledge that I have grained from YouTube and other Self paced courses, increasing confidence in web design/development.
@@ -90,7 +94,6 @@ I would like to become more proficient in my HTML and CSS skills before I start 
 ### Useful resources
 
 - [adding hover effect on picture](https://www.youtube.com/watch?v=exb2ab72Xhs&t=431s) - This video showed me how to add a hover effect to images. 
-- [project overview](https://www.youtube.com/watch?v=88aBN3N45WA) - This video inspired me to start this project.
 
 ## Author
 

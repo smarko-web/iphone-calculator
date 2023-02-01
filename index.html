@@ -4,22 +4,25 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Calculator</title>
+        <link rel="shortcut icon" href="icon.png" type="image/x-icon">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script type="module" src="script.js"></script>
     </head>
     <body>
         
         <main>
             <section class="calculator">
                 <div class="display">
-                    <div class="previous" data-previous>user interface completed</div>
-                    <div class="current" data-current>Functional Coming Soon! </div>
+                    <h2 class="previous" data-previous></h2>
+                    <h1 class="current" data-current></h1>
                 </div>
                 <button class="top-key" data-all-clear>AC</button>
-                <button class="top-key" data-operation>+/-</button>
-                <button class="top-key" data-operation>%</button>
-                <button class="side-key" data-operation>/</button>
+                <button class="top-key hide" data-clear>C</button>
+                <button class="top-key" data-revert>+/-</button>
+                <button class="top-key" data-percent>%</button>
+                <button class="side-key" data-operation>÷</button>
                 <button data-number>7</button>
                 <button data-number>8</button>
                 <button data-number>9</button>
@@ -37,6 +40,6 @@
                 <button class="side-key" data-equal>=</button>
             </section>
         </main>
-        <script src="script.js"></script>
+        <!-- <script type="module" src="script.js"></script> -->
     </body>
 </html>
