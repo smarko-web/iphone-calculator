@@ -27,6 +27,12 @@ button {
     border: none;
     height: var(--buttonSize);
     width: var(--buttonSize);
+    transition: .25s ease-in-out;
+}
+button:active {
+    background-color: #fff;
+    color: #000;
+    transition: .25s ease-in-out;
 }
 .calculator {
     width: 90%;
@@ -42,8 +48,28 @@ button {
     background-color: #d4d4d2;
     color: black;
 }
+.top-key:active {
+    color: #d4d4d2;
+    background-color: #fff;
+}
 .side-key {
     background-color: #ff9500;
+}
+.side-key:active {
+    background-color: #dbab68;
+    transition: .5s ease-in-out;
+}
+.side-key:focus {
+    color: #ff9500;
+    background-color: #fff;
+}
+[data-equal]:focus {
+    background-color: #ff9500;
+    color: #fff;
+}
+[data-equal]:active {
+    background-color: #dbab68;
+    color: #fff;
 }
 .display {
     /* border: black solid 1px; */

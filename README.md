@@ -55,6 +55,19 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
+```html
+<script type="module" src="script.js"></script>
+
+```
+```js
+export default calculator;
+export const prevNumber = document.querySelector('[data-previous]');
+export const currentNumber = document.querySelector('[data-current]');
+import Calculator from '/calculator.js';
+
+this.prevNumber = this.currentNumber + ' ' + this.operation.toString();
+// I added the catcading in the appendOperation method (self idea), but later updateDisplay method (followed the tutorial)
+```
 ```css
 .overlay {
     position: absolute;
