@@ -1,6 +1,6 @@
-# Frontend Mentor - NFT preview card component solution
+# Javascript iPhone calculator
 
-This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This self challenge was encouraged by this [YouTube video](https://youtu.be/j59qQ7YWLxw) where I developed some of my Javascript skills. However the design was replicated without any help (except for the buttons were oval, which was resolved by giving them a height and width of the same value).
 
 ## Table of contents
 
@@ -11,34 +11,19 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-
-
-
+    - [key consepts](##key-consepts)
+- [Continued development](##continued-development)
+ 
 ## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
 
 ### Screenshot
 
-![width 214px](screenshots/214.png)
-![width 375px](screenshots/375.png)
+![width 320px](screenshots/320.png)
 ![width 1440px](screenshots/1440.png)
-
-
-
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [view site](https://smarko-web.github.io/nft_preview_card_component_main/)
+- Live Site URL: [view site](https://smarko-web.github.io/iphone-calculator/)
 
 ## My process
 
@@ -46,6 +31,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
+- CSS grid
 - Flexbox
 - Mobile-first workflow
 
@@ -68,48 +54,14 @@ import Calculator from '/calculator.js';
 this.prevNumber = this.currentNumber + ' ' + this.operation.toString();
 // I added the catcading in the appendOperation method (self idea), but later updateDisplay method (followed the tutorial)
 ```
-```css
-.overlay {
-    position: absolute;
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--Cyan);
-}
-.overlay:hover {
-    opacity: .5;
-    cursor: pointer;
-    transition: var(--transtime) all ease-in-out;
-}
-.overlay img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-}
-```
 
-- [project overview](https://youtu.be/j59qQ7YWLxw) - This video inspired me to start this project. Also I used Their functions
-
+### key concepts
 - use px for grid gap to not have grid overflow(if use % you will incounter problems)
 
 - [active vs focus pseudo classes](https://www.youtube.com/watch?v=H1-rmg1Fj3E) - active is when you click & hold on an elemet, focus is when you clicked on an element (use with tab)
 
-- [JavaScript ES6 Modules](https://www.youtube.com/watch?v=cRHQNNcYf6s) - learned how to export/import using JS Modules
-### Continued development
+- [JavaScript ES6 Modules](https://www.youtube.com/watch?v=cRHQNNcYf6s) - learned how to export/import using JS Modules (however I couldn’t implement it in this project because GitHub pages doesn’t support them)
 
-I would like to become more proficient in my HTML and CSS skills before I start doing more advanced web development. As I am practicing these skills, applying the prior knowledge that I have grained from YouTube and other Self paced courses, increasing confidence in web design/development.
+## Continued development
 
-### Useful resources
-
-- [adding hover effect on picture](https://www.youtube.com/watch?v=exb2ab72Xhs&t=431s) - This video showed me how to add a hover effect to images. 
-
-## Author
-
-- Frontend Mentor - [@smarko-web](https://www.frontendmentor.io/profile/smarko-web)
-
-
+I would like to become more proficient in my HTML, JS and CSS skills before I start doing more advanced web development. As I am practicing these skills, applying the prior knowledge that I have grained from YouTube and other Self paced courses, increasing confidence in web design/development.
