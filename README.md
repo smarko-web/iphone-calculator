@@ -53,6 +53,14 @@ import Calculator from '/calculator.js';
 
 this.prevNumber = this.currentNumber + ' ' + this.operation.toString();
 // I added the catcading in the appendOperation method (self idea), but later updateDisplay method (followed the tutorial)
+
+ clearButton.addEventListener('click', () => {
+            calculator.clear();
+            calculator.updateDisplay();
+            //make the AC button visible again
+            clearButton.classList.add('hide');
+            clearAllButton.classList.remove('hide');
+});
 ```
 
 ### key concepts

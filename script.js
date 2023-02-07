@@ -6,7 +6,6 @@ class Calculator {
     }
     clear() {
         this.currentNumber = '';
-
         // this.currentNumber = this.currentNumber.toString().slice(0, -1);
         // delete last degit
     }
@@ -18,12 +17,6 @@ class Calculator {
     appendNumber(number) {
         if (number === '.' && this.currentNumber.includes('.')) return;
         // prevents users from entering multiple decimals
-
-
-        // if (this.currentNumber === '.') {
-        //     this.currentNumber = '0';
-        //     this.updateDisplay();
-        // }
 
         this.currentNumber = this.currentNumber.toString() + number.toString();
     }
@@ -38,21 +31,15 @@ class Calculator {
         this.currentNumber = '';
     }
     percentOf() {
-        if (!this.currentNumber) return;
+        if (!this.currentNumber || this.currentNumber === 0) return;
         let percent = this.currentNumber / 100;
         this.currentNumber = percent;
     }
     revert() {
-        // let oppsiteValue;
-        if (!this.currentNumber) {
-            this.currentNumber = '-';
-            return;
-        };
-
-        // if(this.currentNumber < 0) {
-        //     oppsiteValue = Math.abs(this.currentNumber);
-        // }
-        // this.currentNumber = oppsiteValue;
+        if (!this.currentNumber || this.currentNumber === 0) return;
+        let oppsiteValue;
+        oppsiteValue = this.currentNumber * -1;
+        this.currentNumber = oppsiteValue;
     }
     compute() {
         let computation;
@@ -98,7 +85,6 @@ class Calculator {
         } else {
             return integerDisplay;
         }
-        
         // this block of code has issues with decimal numbers
         // const floatNumber = parseFloat(number);
         // if (isNaN(floatNumber)) return '';
@@ -106,13 +92,6 @@ class Calculator {
     }
 
     updateDisplay() {
-        // if(calculator.currentNumber) {
-        //     clearButton.classList.remove('hide');
-        //     clearAllButton.classList.add('hide');
-        // }else {
-        //     clearAllButton.classList.add('show');
-        // }
-
         currentNumber.innerText = this.formatNumber(this.currentNumber);
         if(this.operation != null) {
             prevNumber.innerText = `${this.formatNumber(this.prevNumber)} ${this.operation}`;
@@ -125,9 +104,9 @@ class Calculator {
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
 const percentButton = document.querySelector('[data-percent]');
-// const revertButton = document.querySelector('[data-revert');
+const revertButton = document.querySelector('[data-revert');
 const clearAllButton = document.querySelector('[data-all-clear]');
-// const clearButton = document.querySelector('[data-clear]');
+const clearButton = document.querySelector('[data-clear]');
 const equalButton = document.querySelector('[data-equal]');
 const prevNumber = document.querySelector('[data-previous]');
 const currentNumber = document.querySelector('[data-current]');
@@ -138,13 +117,27 @@ numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText);
         calculator.updateDisplay();
+        clearAllButton.classList.add('hide');
+        clearButton.classList.remove('hide');
+        //make the clear button work 
+        clearButton.addEventListener('click', () => {
+            calculator.clear();
+            calculator.updateDisplay();
+            //make the AC button visible again
+            clearButton.classList.add('hide');
+            clearAllButton.classList.remove('hide');
+        });
     });
+
+    
 });
 
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendOperation(button.innerText);
         calculator.updateDisplay();
+        clearAllButton.classList.toggle('hide');
+        clearButton.classList.toggle('hide');
     });
 });
 
@@ -158,29 +151,13 @@ clearAllButton.addEventListener('click', () => {
     calculator.updateDisplay();
 })
 
-// clearButton.addEventListener('click', () => {
-//     calculator.clear();
-//     calculator.updateDisplay();
-// })
-
-// if(calculator.currentNumber) {
-//     clearButton.classList.remove('hide');
-//     clearAllButton.classList.add('hide');
-// }else {
-//     clearAllButton.classList
-// }
 
 percentButton.addEventListener('click', () => {
     calculator.percentOf();
     calculator.updateDisplay();
 })
 
-// revertButton.addEventListener('click', () => {
-//     calculator.revert();
-//     calculator.updateDisplay();
-//     revertButton.classList.toggle('negative-active');
-
-//     if (calculator.prevNumber) {
-//         revertButton.classList.toggle('negative-active');
-//     }
-// })
+revertButton.addEventListener('click', () => {
+    calculator.revert();
+    calculator.updateDisplay();
+})

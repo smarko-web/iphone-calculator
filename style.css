@@ -41,7 +41,6 @@ button:active {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 0px;
-    /* border: red solid 1px; */
     justify-items: center;
 }
 .top-key {
@@ -72,7 +71,6 @@ button:active {
     color: #fff;
 }
 .display {
-    /* border: black solid 1px; */
     width: 100%;
     min-height: 10vh;
     max-height: auto;
@@ -95,11 +93,4 @@ button:active {
 }
 .hide {
     display: none;
-}
-.show {
-    display: block;
-}
-.negative-active {
-    color: white;
-    background-color: red;
 }
